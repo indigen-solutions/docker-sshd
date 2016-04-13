@@ -15,7 +15,7 @@ This image based on debian:8 embed a simple ssh server
   - **SSH_USER_HOME:** If set change the ssh user home directory. *(Default: home)*
   - **SSH_ROOT_PASSWD:** If set change the root password. *(Default: root)*
   
-### docker-compose
+### Docker-compose example
 ```yaml
 version: '2'
 services:
