@@ -14,3 +14,17 @@ This image based on debian:8 embed a simple ssh server
   - **SSH_USER_PASSWD:** If set change the ssh user password. *(Default: password)*
   - **SSH_USER_HOME:** If set change the ssh user home directory. *(Default: home)*
   - **SSH_ROOT_PASSWD:** If set change the root password. *(Default: root)*
+  
+### docker-compose
+```yaml
+version: '2'
+services:
+  sshd:
+    image: indigen/sshd:latest
+    environment:
+      - SSH_USER_UID=1000
+      - SSH_USER_NAME=indigen
+      - SSH_USER_PASSWD=PassWord
+    expose:
+      - 22
+```
