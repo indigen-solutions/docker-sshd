@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ ! -z $USER_PASSWD ]
+if [ ! -z $SSH_USER_PASSWD ]
 then
-    echo "user:$USER_PASSWD" | chpasswd
+    echo "user:$SSH_USER_PASSWD" | chpasswd
 fi
 
 /usr/sbin/sshd -D
