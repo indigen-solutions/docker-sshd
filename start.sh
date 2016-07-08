@@ -5,7 +5,7 @@
 [ -z "$SSH_USER_GROUP" ]    && SSH_USER_GROUP=users
 [ -z "$SSH_USER_NAME" ]     && SSH_USER_NAME=user
 [ -z "$SSH_USER_PASSWD" ]   && SSH_USER_PASSWD=password
-[ -z "$SSH_USER_HOME" ]     && SSH_USER_HOME=/home/user
+[ -z "$SSH_USER_HOME" ]     && SSH_USER_HOME=/home/$SSH_USER_NAME
 
 echo "root:x:0:0:root:/root:/bin/bash" > /etc/passwd
 echo "sshd:x:104:65534::/var/run/sshd:/usr/sbin/nologin" >> /etc/passwd
